@@ -10,7 +10,7 @@ npm install --save humancron
 
 ## API
 
-### formatCronAsString(expression: string): string
+### *formatCronAsString(expression: string): string*
 
 Parses a cron expression and formats it into a human readable string.
 
@@ -30,7 +30,7 @@ formatCronAsString("* 5-10/2 * JAN-MAY/3 MON-WED")
 "At every minute of every 2nd hour between the 5th through the 10th hour of every day between Monday through Wednesday of every 3rd month between January through May"
 ```
 
-### formatCronAsObject(expression: string): FormattedExpression
+### *formatCronAsObject(expression: string): FormattedExpression*
 
 Does the same formatting as ```formatCronAsString(expression: string): string``` without joining the separate parts
 together.
@@ -40,9 +40,7 @@ object also includes information on whether the time part has been simplified in
 
 ```typescript
 formatCronAsObject("10-30 * 1-12 * *")
-```
 
-```json
 {
   second: null,
   minute: 'every minute between the 10th through the 30th minute',
@@ -56,15 +54,13 @@ formatCronAsObject("10-30 * 1-12 * *")
 
 ```
 
-### parseExpression(expression: string): ParsedExpression
+### *parseExpression(expression: string): ParsedExpression*
 
 Parses a cron expression. Used internally but might be useful in certain use cases.
 
 ```typescript
 parseExpression("10-30 * 1-12 * *")
-```
 
-```json
 {
   second: null,
   minute: {
