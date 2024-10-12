@@ -1,0 +1,35 @@
+{
+  "name": "humancron",
+  "version": "0.1.0",
+  "description": "Get a human-readable string from a cron expression.",
+  "author": "Emanuel Claesson <emanuel.claesson@gmail.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "nyc mocha -r ts-node/register 'tests/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "TODO"
+  },
+  "keywords": [
+    "cron",
+    "formatting",
+    "string",
+    "humanreadable"
+  ],
+  "devDependencies": {
+    "@types/chai": "^5.0.0",
+    "@types/mocha": "^10.0.9",
+    "chai": "^4.5.0",
+    "mocha": "^10.7.3",
+    "nyc": "^17.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
